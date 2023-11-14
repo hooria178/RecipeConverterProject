@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<title>Recipe Converter</title>
+<link rel="stylesheet" href="recipe-converter.css">
+
+</html>
+
+<body>
+  <!--Header Element-->
+  <div class="header">
+    <p class="header-title"> Palate Translator: <br> Culinary Conversion Companion </p>
+  </div>
+
+  <div class="main">
+    <!--Recipe Input Form Element-->
+    <div class="input-content">
+
+      <form>
+        <!--Text Area For Input-->
+        <textarea id="recipe-input" class="recipe-input" placeholder="COPY (OR TYPE) INGREDIENTS LIKE THIS:
+
+1 cup granulated sugar
+8 tablespoons (1 stick) unsalted butter, room temperature       
+2 large eggs       
+3 ripe bananas"></textarea>
+
+        <!--Initial Serving Integer Input-->
+        <div class="servings-og">
+          <p class="og-servings">Initial Servings: </p>
+          <input class="og-servings-input" id="initial-servings" type="number" placeholder="Enter Integer">
+        </div>
+
+        <!--Intended Servings Integer Input-->
+        <div class="servings-og">
+          <p class="intended-servings">Intended Servings: </p>
+          <input class="intended-servings-input" id="intended-servings" type="number" placeholder="Enter Integer">
+        </div>
+
+        <!--Type of Culinary Elements-->
+        <div class="type-text">
+          <p>Please select if recipe is <br> it is baking or cooking recipe:</p>
+        </div>
+        <!--Baking or Cooking Radio Buttons-->
+        <div class="type-div">
+          <input type="radio" id="baking" name="recipe-type" value="BAKING">
+          <label for="baking">Baking</label><br>
+          <input type="radio" id="cooking" name="recipe-type" value="COOKING">
+          <label for="cooking">Cooking</label><br>
+        </div>
+
+        <!--Reset, Resize, and Help Button-->
+        <div class="buttons">
+          <input class="clear-button" type="reset" value="Reset" onclick="resetOutput()">
+          <input class="resize-button" type="submit" value="Resize" onclick="myFunction()">
+          <button class="help-button" onclick="openModal()" type="button">Help</button>
+        </div>
+      </form>
+    </div>
+
+    <!--Resized Recipe Output Element-->
+    <div class="output-content">
+      <p id="output" class="default-output-placeholder"></p>
+    </div>
+
+    <!--Help window element-->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>
+          <strong>How to use this website: </strong><br><br>
+          1: Only use whole integers for amount <br><br>
+          2: No spaces between sentences, only newline to seperate each ingredient <br>
+
+        </p>
+        <a href="#" class="close-button" onclick="closeModal()">Close</a>
+      </div>
+    </div>
+
+  </div>
+  <script src="recipe-converter.js"></script>
+</body>
